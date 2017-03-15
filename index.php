@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Angular | hackathon.getir</title>
 <script type="text/javascript" src="js/jquery-1.9.0.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.10.0.custom.js"></script>
@@ -18,7 +19,7 @@
 						if(response.data.msg === "Success")
 							$scope.cevaplar = response.data.records;
 						else
-							alert("Hata! Kayıtlar çekilemedi.");
+							alert("Hata! KayÄ±tlar Ã§ekilemedi.");
 					}
 				);	
 			}	
@@ -28,23 +29,23 @@
 	$(function() {
 	
 		$( ".tarih" ).datepicker({
-			dateFormat: "yy-mm-dd",//tarih formatı yy=yıl mm=ay dd=gün
-			appendText: "(yıl-ay-gün)",//inputun sonuna bu yazıyı yazar.
-			autoSize: true,//inputu otomatik boyutlandırır
-			changeMonth: true,//ayı elle seçmeyi aktif eder
-			changeYear: true,//yılı elee seçime izin verir
-			dayNames:[ "pazar", "pazartesi", "salı", "çarşamba", "perşembe", "cuma", "cumartesi" ],//günlerin adı
-			dayNamesMin: [ "pa", "pzt", "sa", "çar", "per", "cum", "cmt" ],//kısaltmalar
-			defaultDate: +5,//takvim açılınca seçili olanı bu günden 10 gün sonra olsun dedik
-			/*isRTL: true//takvimi ters çevirir garip bi özellik :D*/
-			maxDate: "+2y+1m +2w",//ileri göre bilme zamanını 2 yıl 1 ay 2 hafta yaptık
-			minDate: "-1y-1m -2w",//geriyi göre bilme alanını 1 yıl 1 ay 2 hafta yaptık.bunu istediğiniz gibi ayarlaya bilirsiniz
-			monthNamesShort: [ "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık" ],//ay seçim alanın düzenledik
-			nextText: "ileri",//ileri butonun türkçeleştirdik
-			prevText: "geri",//buda geri butonu için
-			showAnim: "drop",//takvim açılım animasyonu alta tüm animasyon isimleri yazdım 
+			dateFormat: "yy-mm-dd",//tarih formatÄ± yy=yÄ±l mm=ay dd=gÃ¼n
+			appendText: "(yÄ±l-ay-gÃ¼n)",//inputun sonuna bu yazÄ±yÄ± yazar.
+			autoSize: true,//inputu otomatik boyutlandÄ±rÄ±r
+			changeMonth: true,//ayÄ± elle seÃ§meyi aktif eder
+			changeYear: true,//yÄ±lÄ± elee seÃ§ime izin verir
+			dayNames:[ "pazar", "pazartesi", "salÄ±", "Ã§arÅŸamba", "perÅŸembe", "cuma", "cumartesi" ],//gÃ¼nlerin adÄ±
+			dayNamesMin: [ "pa", "pzt", "sa", "Ã§ar", "per", "cum", "cmt" ],//kÄ±saltmalar
+			defaultDate: +5,//takvim aÃ§Ä±lÄ±nca seÃ§ili olanÄ± bu gÃ¼nden 10 gÃ¼n sonra olsun dedik
+			/*isRTL: true//takvimi ters Ã§evirir garip bi Ã¶zellik :D*/
+			maxDate: "+2y+1m +2w",//ileri gÃ¶re bilme zamanÄ±nÄ± 2 yÄ±l 1 ay 2 hafta yaptÄ±k
+			minDate: "-1y-1m -2w",//geriyi gÃ¶re bilme alanÄ±nÄ± 1 yÄ±l 1 ay 2 hafta yaptÄ±k.bunu istediÄŸiniz gibi ayarlaya bilirsiniz
+			monthNamesShort: [ "Ocak", "Åubat", "Mart", "Nisan", "MayÄ±s", "Haziran", "Temmuz", "AÄŸustos", "EylÃ¼l", "Ekim", "KasÄ±m", "AralÄ±k" ],//ay seÃ§im alanÄ±n dÃ¼zenledik
+			nextText: "ileri",//ileri butonun tÃ¼rkÃ§eleÅŸtirdik
+			prevText: "geri",//buda geri butonu iÃ§in
+			showAnim: "drop",//takvim aÃ§Ä±lÄ±m animasyonu alta tÃ¼m animasyon isimleri yazdÄ±m 
 			/*fold-blind-bounce-clip-drop-explode-fade-highlight-puff-pulsate-scale-shake-slide-size-transfer*/
-			//showOn: "both",//inputun yanına ... butonu koyuyor
+			//showOn: "both",//inputun yanÄ±na ... butonu koyuyor
 		});
 		
 	});
@@ -53,9 +54,9 @@
 <body ng-app="myApp" ng-controller="myControl">
 <div id="container">
 <form name="myForm" ng-submit="eylem()">
-	<span class="tarihSpan">Başlangıç tarihi seçin:</span><input ng-model="tarih1" type="text"  class="tarih" id="tarih1" />
-	<span class="tarihSpan">Bitiş tarihi seçin:</span><input type="text" ng-model="tarih2"  class="tarih" id="tarih2" />
-	<button type="submit">Gönder</button>
+	<span class="tarihSpan">BaÅŸlangÄ±Ã§ tarihi seÃ§in:</span><input ng-model="tarih1" type="text"  class="tarih" id="tarih1" />
+	<span class="tarihSpan">BitiÅŸ tarihi seÃ§in:</span><input type="text" ng-model="tarih2"  class="tarih" id="tarih2" />
+	<button type="submit">GÃ¶nder</button>
 </form>
 </div>
 
